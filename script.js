@@ -1,5 +1,4 @@
 var sceneEl = document.querySelector('a-scene').object3D;
-var entityEl = document.querySelector('a-entity').object3D;
 var scene = sceneEl
 var loader = new THREE.GLTFLoader();
 const pickableObjects = []
