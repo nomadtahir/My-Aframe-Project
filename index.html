@@ -1,29 +1,24 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-  <title>Camera Movement</title>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Model Viewer AR - VR</title>
-  <meta name="description" content="Model Viewer (VR / AR) • A-Frame" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-extras@3.3.0/dist/aframe-extras.min.js"></script>
-  <script src="js/background-gradient.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+
+
+
 </head>
 
 <body>
-
-  <body>
-    <a-scene renderer="colorManagement: true;" model-viewer="gltfModel: #machine; title: Machine">
-      <a-entity
-        id = machinemodel
-        gltf-model="url(https://cdn.glitch.me/00f2d644-93e9-43db-b8e5-cac6ced4b897%2FtestNew4LOD.glb?v=1637850975489)"
-        scale="0.1 0.1 0.1"></a-entity>
-      <a-camera>
-        <a-cursor color="#FF0000"></a-cursor>
-      </a-camera>
-    </a-scene>
-  </body>
+  <a-scene stats="fps" renderer="colorManagement: true;" model-viewer="gltfModel: #machine; title: Machine"
+    background="color:grey">
+    <a-camera>
+      <a-cursor color="#FF0000"></a-cursor>
+    </a-camera>
+    <script src="script.js">
+    </script>
+  </a-scene>
+</body>
 
 </html>
