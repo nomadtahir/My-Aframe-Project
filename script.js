@@ -19,8 +19,8 @@ loader.load('https://cdn.glitch.me/00f2d644-93e9-43db-b8e5-cac6ced4b897%2FtestNe
     theResult1.add(gltf.scene.getObjectByName("Object_LOD1"))
     theResult2.add(gltf.scene.getObjectByName("Object_LOD2"))
 
-    lod.addLevel(theResult0, 30)
-    lod.addLevel(theResult1, 20)
+    /*lod.addLevel(theResult0, 30)
+    lod.addLevel(theResult1, 20)*/
     lod.addLevel(theResult2, 10)
     lod.scale.set(0.01, 0.01, 0.01)
     lod.rotation.set(0, -1.5, 1.555)
