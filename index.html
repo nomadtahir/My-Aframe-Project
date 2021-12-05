@@ -2,11 +2,13 @@
 <html>
 
 <head>
-  <title>Camera Movement</title>
+  <title>Machine VR Test</title>
   <meta charset="utf-8" />
   <title>Model Viewer AR - VR</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script>src = "loader.js"</script>
+
 
 </head>
 
@@ -21,7 +23,11 @@
         </a-entity>
       </a-entity>
       <a-entity cursor raycaster="far: 20; interval: 1000; objects: .clickable"></a-entity>
-
+      <a-assets>
+        <a-asset-item id="cityModel"
+          src="https://cdn.glitch.me/00f2d644-93e9-43db-b8e5-cac6ced4b897%2FtestNew4LOD.glb?"></a-asset-item>
+      </a-assets>
+      <a-entity gltf-model="#cityModel" modify-materials visible="false"></a-entity>
       <script src="script.js"></script>
 
     </a-scene>
