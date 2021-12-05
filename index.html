@@ -1,24 +1,30 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
+  <title>Camera Movement</title>
+  <meta charset="utf-8" />
   <title>Model Viewer AR - VR</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
-
-
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
 </head>
 
 <body>
-  <a-scene stats="fps" renderer="colorManagement: true;" model-viewer="gltfModel: #machine; title: Machine"
-    background="color:grey">
-    <a-camera>
-      <a-cursor color="#FF0000"></a-cursor>
-    </a-camera>
-    <script src="script.js">
-    </script>
-  </a-scene>
-</body>
+
+  <body>
+    <a-scene stats="fps" renderer="colorManagement: true;" model-viewer="gltfModel: #machine; title: Machine"
+      background="color:grey" raycaster="objects: .interactable">
+      <a-entity id="rig" movement-controls="speed : 0.15 , constrainToNavMesh: true ">
+        <a-entity camera position="0 1.6 0" look-controls="pointerLockEnabled: true" aycaster="objects: .interactable">
+          <a-cursor color="#FF0000"></a-cursor>
+        </a-entity>
+      </a-entity>
+      <a-entity cursor raycaster="far: 20; interval: 1000; objects: .clickable"></a-entity>
+
+      <script src="script.js"></script>
+
+    </a-scene>
+  </body>
 
 </html>
