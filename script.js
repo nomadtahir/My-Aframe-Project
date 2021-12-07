@@ -8,8 +8,6 @@ loader.load('https://cdn.glitch.me/00f2d644-93e9-43db-b8e5-cac6ced4b897%2FtestNe
     model.traverse(function (o) {
         if (o instanceof THREE.Mesh) {
             pickableObjects.push(o)
-        
-
         }
     });
     let theResult0 = new THREE.Object3D();
