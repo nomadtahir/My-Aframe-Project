@@ -1,5 +1,3 @@
-import {SimplifyModifier} from './node_modules/super-three/examples/jsm/modifiers/SimplifyModifier.js'
-var modifer = new SimplifyModifier();
 var sceneEl = document.querySelector('a-scene').object3D;
 var scene = sceneEl
 var loader = new THREE.GLTFLoader();
@@ -10,11 +8,7 @@ loader.load('https://cdn.glitch.me/00f2d644-93e9-43db-b8e5-cac6ced4b897%2FtestNe
     model.traverse(function (o) {
         if (o instanceof THREE.Mesh) {
             pickableObjects.push(o)
-            //SimplifyModifier
-            var numVertices = o.geometry.attributes.position.count;
-            o.geometry = modifer.modify(o.geometry, Math.floor(numVertices * 0.1));
-            o.geometry.clearGroups()
-            o.geometry.computeVertexNormals()
+        
 
         }
     });
